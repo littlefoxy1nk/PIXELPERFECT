@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+h1, h2, h3 {
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .container {
+    max-width: 1110px;
+    margin: 0px auto;
+    width: 100%;
+  }
+
+  
+
+  /******/
+
+  body {
+    font-family: "Inter", sans-serif;
+    background-color: #FFFDFA;
+  }
+
+  /*** header ***/
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 15px;
+  }
+  
+  .logo img {
+    max-width: 150px;
+  }
+ /**** hamburger ****/ 
+
+#toggle {
+    display: none;
+}
+#hamburger{
+    z-index: 100;
+    position: relative;
+}
+
+.nav {
+    width: 100vw;
+    background-color: #6814debf;
+    position: fixed;
+    top:0;
+    right: -100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+    gap:40px;
+    transition: 0.4s ease;
+
+}
+#toggle:checked ~ .nav {
+    right: 0;
+}
+
+  .nav a {
+    color: #FFFDFA;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 26px;
+    border-radius: 5px;
+  }
+#hamburger span {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color:#00001A ;
+    position: relative;
+}
+
+#hamburger span::before,
+#hamburger span::after {
+    position:absolute;
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #00001A;
+
+}
+#hamburger span::before{
+    top:-7px;
+}
+#hamburger span::after{
+    bottom: -7px;
+}
+
+/* main */
+   .main .container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-bottom: 70px;
+    padding: 0px 15px;
+
+}
+/** right **/
+.right {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.right-image{
+    grid-column: 1 / 3;
+}
+
+.right-title h1{
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 56px;
+    letter-spacing: 1px;
+}
+.right-text p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 26px;
+    margin-bottom: 25px;
+    color:#5E607A
+}
+
+.btn {
+    color: white;
+    padding: 15px 33px;
+    background-color: #F15D51;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 4.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+}
+
+/** left **/
+
+.left{
+    background-color: #00001A;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+.left-title h2 {
+    font-size:35px;
+    font-weight:600;
+    color: #E9AA52;
+    letter-spacing: 1.5px;
+    margin-bottom: 35px;
+}
+.left .text h3 {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24px;
+    color: #FFFDFA;
+    margin-bottom: 10px;
+}
+.left .text {
+    font-size: 15px ;
+    font-weight: 400;
+    line-height: 26px;
+    color: #C5C6C5;
+}
+.left .line {
+    color:#5E607A;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+/* bottom*/ 
+.bottom .container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 70px;
+    padding: 0 15px;
+}
+
+.box{
+    display: grid;
+    grid-template-columns: 100px 2fr;
+    gap: 15px;
+}
+.bottom-image {
+    height: 127px;
+}
+
+.text-number {
+    font-size: 32px;
+    font-weight: 800;
+    color: #c5c6ce;
+}
+.text-title h3{
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    color: #00001A;
+}
+.para {
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 26px;
+    color: #5E607A;
+}
+@media screen and (min-width:481px) {
+/*** header en ordi*/
+.nav {
+    all:unset;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 42px;
+  }
+  .nav a {
+    color: #5E607A;
+  }
+#hamburger {
+    display: none;
+}
+
+.header .container {
+ padding: 70px 0px;
+}
+/*** main en ordi ***/
+.main .container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-bottom: 70px;
+    padding:0px;
+    
+}
+.right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 1fr;
+    gap: 35px;
+}
+.btn {
+    margin: 0;
+}
+/*** bottom ***/
+.bottom .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 70px;
+    padding: 0px;
+}
+}
