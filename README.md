@@ -35,7 +35,7 @@ The design for this project was based on the following Figma file:
 
 ## 📱​ The Final Result  
 You can view the deployed version of the project here:  
-[my website]([https://your-live-site-link.com](https://littlefoxy1nk.github.io/PIXELPERFECT/))  
+[my website]([https://littlefoxy1nk.github.io/PIXELPERFECT/))  
 
 
 
